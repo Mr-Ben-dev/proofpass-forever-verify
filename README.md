@@ -9,8 +9,6 @@
 [![Filecoin](https://img.shields.io/badge/Powered_by-Filecoin-00D4FF?style=for-the-badge&logo=filecoin)](https://filecoin.io)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-<img src="https://raw.githubusercontent.com/Mr-Ben-dev/proofpass-forever-verify/main/public/hero-animation.gif" width="800" alt="ProofPass Hero">
-
 **The world's first decentralized proof-of-residency identity network**  
 *Built on Filecoin Onchain Cloud*
 
@@ -60,19 +58,22 @@ Centralized systems can be hacked, deleted, or denied
 
 <div align="center">
 
-```mermaid
-graph LR
-    A[📄 Upload Document] --> B[🤖 AI Verification]
-    B --> C[🔐 Filecoin Storage]
-    C --> D[✅ PDP Proof]
-    D --> E[🏆 ProofStamp NFT]
-    
-    style A fill:#00BFFF,stroke:#fff,stroke-width:2px
-    style E fill:#00FF88,stroke:#fff,stroke-width:2px
-Your residency, validated. Forever on Filecoin.
+### 📄 → 🤖 → 🔐 → ✅ → 🏆
 
-🎥 How It Works
-typescriptDownloadCopy code Wrap// User uploads proof document
+**Upload Document → AI Verification → Filecoin Storage → PDP Proof → ProofStamp NFT**
+
+**Your residency, validated. Forever on Filecoin.**
+
+</div>
+
+---
+
+## 🎥 How It Works
+
+### 🚀 Step 1: Upload & Verify
+
+```typescript
+// User uploads proof document
 const proof = await ProofPass.upload({
   document: utilityBill,
   type: 'UTILITY_BILL',
@@ -83,6 +84,7 @@ const proof = await ProofPass.upload({
 * 🤖 AI extracts and validates address data
 * 🔐 End-to-end encryption before storage
 
+⛓️ Step 2: Store on Filecoin
 typescriptDownloadCopy code Wrap// Store via FilecoinWarmStorageService
 const deal = await FilecoinWarmStorage.store({
   data: encryptedProof,
@@ -94,6 +96,7 @@ const deal = await FilecoinWarmStorage.store({
 * 🔄 PDP (Proof of Data Possession) every 24h
 * 🌍 Global replication across miners
 
+✅ Step 3: Mint ProofStamp
 typescriptDownloadCopy code Wrap// Mint verification NFT
 const stamp = await ProofPass.mint({
   wallet: userWallet,
@@ -105,6 +108,7 @@ const stamp = await ProofPass.mint({
 * 📝 Contains encrypted metadata
 * ⏰ Timestamped verification history
 
+🔍 Step 4: Instant Verification
 typescriptDownloadCopy code Wrap// Anyone can verify residency
 const isValid = await Synapse.verifyResidency(
   wallet,
@@ -184,21 +188,25 @@ Works in 195 countries
 $5 verification fees via FilecoinPay
 
 📊 Use Cases
+🏠 Remote Workers
 
 * Prove residency for tax purposes
 * Verify address for employer compliance
 * Access location-based services
 
+🌍 Refugees & Displaced Persons
 
 * Create permanent identity records
 * Access humanitarian aid
 * Apply for asylum with verified docs
 
+🏦 DeFi & Web3
 
 * KYC/AML compliance without doxxing
 * Credit scoring based on residency history
 * DAO voting eligibility
 
+🏛️ Government Services
 
 * Digital visa applications
 * Social benefit distribution
@@ -233,6 +241,17 @@ const verification = await proofpass.verify({
 }
 
 💡 Why ProofPass?
+Traditional SystemsProofPass❌ Centralized databases✅ Decentralized on Filecoin❌ Can be hacked or deleted✅ Immutable & permanent❌ Slow verification (days)✅ Instant (<1 second)❌ High fees ($50-200)✅ Low cost ($5)❌ Regional limitations✅ Global accessibility
+
+🏆 Technical Innovation
+First-of-its-Kind Features
+
+* 🔍 PDP for Residency: First use of Proof of Data Possession to prove document persistence over time
+* 💳 FilecoinPay Integration: Users pay $1–5 in USDFC/FIL to verify or issue — sustainable, no grants needed
+* 🔧 Synapse SDK as Identity Layer: One call to verify: Synapse.verifyResidency(wallet)
+* ⚡ FilCDN for Instant Access: Embassies, employers pull records globally in <1s
+* 🤝 GTM Strategy: Partner with refugee NGOs, digital nomad platforms, and DeFi credit protocols
+
 
 🤝 Contributing
 We love contributions! See CONTRIBUTING.md for guidelines.
