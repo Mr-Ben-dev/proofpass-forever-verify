@@ -114,55 +114,12 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Submission Materials */}
-        <div className="border-t border-electric-blue/10 pt-12 mb-12">
-          <h4 className="text-xl font-semibold text-off-white mb-8 text-center">Wave 1 Submission Materials</h4>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Notion Design Doc",
-                description: "Complete problem analysis, user personas, architecture, and GTM strategy",
-                icon: FileText,
-                link: "#",
-                status: "Available"
-              },
-              {
-                title: "GitHub Repository", 
-                description: "Technical architecture, system diagrams, and SDK preview code",
-                icon: Github,
-                link: "#",
-                status: "Public"
-              },
-              {
-                title: "Figma Prototype",
-                description: "Interactive user flows and complete visual design system",
-                icon: ExternalLink,
-                link: "#", 
-                status: "Live"
-              }
-            ].map((material, i) => (
-              <div key={i} className="bg-navy-medium/20 backdrop-blur-glass border border-electric-blue/20 rounded-2xl p-6 hover:border-electric-blue/40 hover:shadow-glow-blue transition-all duration-300">
-                <div className="flex items-start justify-between mb-4">
-                  <material.icon className="w-8 h-8 text-electric-blue" />
-                  <span className="text-xs text-verification-green font-medium bg-verification-green/10 rounded-full px-2 py-1">
-                    {material.status}
-                  </span>
-                </div>
-                <h5 className="text-lg font-semibold text-off-white mb-2">{material.title}</h5>
-                <p className="text-off-white/70 text-sm mb-4">{material.description}</p>
-                <Button variant="ghost-glow" size="sm" className="w-full">
-                  View Material
-                  <ExternalLink className="w-3 h-3" />
-                </Button>
-              </div>
-            ))}
-          </div>
-        </div>
+      
 
         {/* Bottom Bar */}
         <div className="border-t border-electric-blue/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-off-white/60 text-sm">
-            © 2024 ProofPass. Built for WaveHack - Filecoin's First Creator Fund.
+            © 2025 ProofPass. Built for WaveHack - Filecoin's First Creator Fund.
           </div>
           
           <div className="flex items-center gap-6">
