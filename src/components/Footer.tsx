@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, FileText, ExternalLink, Zap, Globe, Mail } from "lucide-react";
+import proofpassLogo from "@/assets/proofpass-logo.png";
 
 const Footer = () => {
   return (
@@ -9,15 +10,19 @@ const Footer = () => {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12 mb-16">
           {/* Brand */}
           <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-electric rounded-xl flex items-center justify-center animate-glow-pulse">
-                <span className="text-navy-deep font-bold text-xl">P</span>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-off-white">ProofPass</h3>
-                <p className="text-sm text-electric-blue">Decentralized Identity</p>
-              </div>
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden">
+              <img 
+                src={proofpassLogo} 
+                alt="ProofPass Logo" 
+                className="w-full h-full object-contain animate-glow-pulse"
+              />
             </div>
+            <div>
+              <h3 className="text-2xl font-bold text-off-white">ProofPass</h3>
+              <p className="text-sm text-electric-blue">Decentralized Identity</p>
+            </div>
+          </div>
             <p className="text-off-white/70 leading-relaxed">
               The world's first decentralized proof-of-residency identity network. 
               Verify where you live forever using tamper-proof, on-chain data.

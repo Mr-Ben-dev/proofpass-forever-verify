@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Github, FileText, ExternalLink } from "lucide-react";
+import proofpassLogo from "@/assets/proofpass-logo.png";
 
 const Header = () => {
   return (
@@ -8,8 +9,12 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-electric rounded-lg flex items-center justify-center animate-glow-pulse">
-              <span className="text-navy-deep font-bold text-lg">P</span>
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden">
+              <img 
+                src={proofpassLogo} 
+                alt="ProofPass Logo" 
+                className="w-full h-full object-contain animate-glow-pulse"
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold text-off-white">ProofPass</h1>
@@ -24,9 +29,6 @@ const Header = () => {
             </a>
             <a href="#api" className="text-off-white hover:text-electric-blue transition-colors">
               For Developers
-            </a>
-            <a href="#roadmap" className="text-off-white hover:text-electric-blue transition-colors">
-              Roadmap
             </a>
           </nav>
 

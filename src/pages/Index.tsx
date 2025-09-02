@@ -5,7 +5,6 @@ import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
 import DeveloperSection from "@/components/DeveloperSection";
 import FilecoinSection from "@/components/FilecoinSection";
-import RoadmapSection from "@/components/RoadmapSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -56,8 +55,7 @@ const Index = () => {
         {/* Scene 5: Filecoin Onchain Cloud Integration */}
         <FilecoinSection />
 
-        {/* Scene 6: Roadmap & GTM */}
-        <RoadmapSection />
+        {/* Roadmap section removed */}
       </main>
 
       {/* Footer with Submission Materials */}
