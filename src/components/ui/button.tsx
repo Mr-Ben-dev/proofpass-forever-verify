@@ -18,11 +18,17 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // ProofPass specific variants
+        hero: "bg-gradient-electric text-navy-deep hover:shadow-glow-blue transform hover:scale-105 transition-all duration-300 font-semibold",
+        "glass-hero": "bg-navy-medium/20 backdrop-blur-glass border border-electric-blue/30 text-off-white hover:bg-electric-blue/10 hover:border-electric-blue/50 hover:shadow-glow-blue",
+        "verification": "bg-gradient-verification text-navy-deep hover:shadow-glow-green animate-verification-pulse font-medium",
+        "ghost-glow": "text-electric-blue hover:bg-electric-blue/10 hover:shadow-glow-blue transition-all duration-300"
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-lg px-10 text-lg",
         icon: "h-10 w-10",
       },
     },
