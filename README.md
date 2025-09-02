@@ -12,7 +12,7 @@
 **The world's first decentralized proof-of-residency identity network**  
 *Built on Filecoin Onchain Cloud*
 
-[🎯 Live Demo](https://proofpass-forever-verify.vercel.app/) • [📄 Docs](https://notion.so/proofpass) • [🛠️ API](https://api.proofpass.io) • [💬 Discord](https://discord.gg/proofpass)
+[🎯 Live Demo](https://proofpass-forever-verify.vercel.app/) 
 
 </div>
 
