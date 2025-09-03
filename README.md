@@ -331,14 +331,3 @@ git push origin feature/AmazingFeature
 MIT © 2025 ProofPass. See [LICENSE](LICENSE) for details.
 
 ---
-
-## 🙏 Acknowledgments
-
-* **Filecoin Foundation** – For Onchain Cloud infrastructure
-* **Protocol Labs** – For IPFS and libp2p
-* **WaveHack Community** – For feedback and support
-
-```
-
-
-
