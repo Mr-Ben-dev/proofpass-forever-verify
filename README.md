@@ -68,73 +68,91 @@ Centralized systems can be hacked, deleted, or denied
 
 ---
 
-🎥 How It Works
-🚀 Step 1: Upload & Verify
+
+## 🎥 How It Works
+
+### 🚀 Step 1: Upload & Verify  
+
+```ts
 // 📤 User uploads proof document
 const proof = await ProofPass.upload({
   document: utilityBill,
   type: 'UTILITY_BILL',
   ai_verify: true
 });
+````
 
+✨ **What happens here?**
 
-✨ What happens here?
+* 📑 Upload **utility bills, leases, or government docs**
+* 🤖 AI **extracts and validates** address data
+* 🔐 **End-to-end encryption** before storage
 
-📑 Upload utility bills, leases, or government docs
+---
 
-🤖 AI extracts and validates address data
+### ⛓️ Step 2: Store on Filecoin
 
-🔐 End-to-end encryption before storage
-
-⛓️ Step 2: Store on Filecoin
+```ts
 // 💾 Store encrypted proof on Filecoin
 const deal = await FilecoinWarmStorage.store({
   data: encryptedProof,
   duration: 'LIFETIME',
   redundancy: 10
 });
+```
 
+✨ **Why Filecoin?**
 
-✨ Why Filecoin?
+* 🪶 **Immutable storage** via Filecoin deals
+* 🔄 **PDP (Proof of Data Possession)** every 24h
+* 🌍 **Global replication** across miners
 
-🪶 Immutable storage via Filecoin deals
+---
 
-🔄 PDP (Proof of Data Possession) every 24h
+### ✅ Step 3: Mint ProofStamp
 
-🌍 Global replication across miners
-
-✅ Step 3: Mint ProofStamp
+```ts
 // 🏆 Mint verification NFT (soulbound)
 const stamp = await ProofPass.mint({
   wallet: userWallet,
   proofCID: deal.cid,
   verificationLevel: 'GOVERNMENT_GRADE'
 });
+```
 
+✨ **Key Benefits**
 
-✨ Key Benefits
+* 🏅 **Soulbound verification token** (non-transferable)
+* 📝 Contains **encrypted metadata**
+* ⏰ **Timestamped** verification history
 
-🏅 Soulbound verification token (non-transferable)
+---
 
-📝 Contains encrypted metadata
+### 🔍 Step 4: Instant Verification
 
-⏰ Timestamped verification history
-
-🔍 Step 4: Instant Verification
+```ts
 // ⚡ Anyone can verify residency
 const isValid = await Synapse.verifyResidency(
   wallet,
   region,
   expiry
 );
+```
+
+✨ **Why it matters**
+
+* ⚡ **Sub-second verification** worldwide
+* 🔒 **Privacy-preserving** (ZK proofs)
+* 🌐 Works with **any Web3 or Web2 app**
+
+```
+
+---
+
+⚡ This version will render beautifully in GitHub README — each step has:
+- A **title with emoji**
+- A **code block in TypeScript**
+- A short **highlight section with bullets**
 
 
-✨ Why it matters
-
-⚡ Sub-second verification worldwide
-
-🔒 Privacy-preserving (ZK proofs)
-
-🌐 Works with any Web3 or Web2 app
-
-
+```
