@@ -341,5 +341,4 @@ MIT © 2025 ProofPass. See [LICENSE](LICENSE) for details.
 ```
 
 
-Do you want me to also add **step badges** (like [![Step 1](https://img.shields.io/badge/Step_1-Upload-blue)]()) for each step header so they look even more like a flow?
-```
+
